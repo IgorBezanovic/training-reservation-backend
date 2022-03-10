@@ -1,11 +1,15 @@
 const mongoose = require("mongoose");
 
-const DayTraining = mongoose.model("DayTraining", {
-    day: {
-      type: String,
-      required: true,
-      trim: true,
-    }
-  })
+const daySchema = new mongoose.Schema({
+  day: {
+    type: String,
+    required: true,
+    trim: true,
+  }
+}, {
+  timestamps: true
+})
+
+const DayTraining = mongoose.model("DayTraining", daySchema)
 
 module.exports = DayTraining;

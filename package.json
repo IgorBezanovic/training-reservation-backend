@@ -1,5 +1,5 @@
 {
-  "name": "task-manager",
+  "name": "training-reservation",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Igor Bezanovic",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
