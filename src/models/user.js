@@ -56,6 +56,9 @@ const userSchema = new mongoose.Schema({
       }
     }
   },
+  image: { 
+    type: Buffer
+  },
   tokens: [{
     token: {
       type: String,
@@ -68,7 +71,7 @@ const userSchema = new mongoose.Schema({
 
 userSchema.methods.generateAuthToken = async function () {
   const user = this
-  const token = jwt.sign({"id": user._id.toString(), "role": user.role}, 'igorbezanoviclevi9')
+  const token = jwt.sign({"id": user._id.toString(), "role": user.role}, process.env.JWT_SECRET)
 
   user.tokens = user.tokens.concat({token})
   await user.save()
