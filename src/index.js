@@ -15,4 +15,4 @@ app.use(userRouter);
 app.use(dayTraining);
 app.use(singleTraining);
 
-app.listen(port, () => {console.log("Server is up on port " + port);});
+app.listen(port, () => {console.log("Server is up on port " + port)});
